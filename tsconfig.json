@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es6",
+        "outDir": "ts-built",
+        "rootDir": "app",
+        "sourceMap": true
+    },
+    "exclude": [
+        "node_modules",
+        "typings",
+        "bin"
+    ]
+}
