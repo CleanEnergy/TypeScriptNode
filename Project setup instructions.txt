@@ -1,0 +1,31 @@
+express
+npm install
+typings install node express --ambient
+mkdir app
+mkdir "app/controllers"
+mkdir "app/routes"
+mkdir ts-built
+move app.js ts-built
+move views ts-built
+move public ts-built
+copy NUL tsconfig.json
+echo {    "compilerOptions": {        "module": "commonjs",        "target": "es6",        "outDir": "ts-built",        "rootDir": "app"    },    "exclude": [        "node_modules",        "typings",        "bin"    ]} > tsconfig.json
+rmdir routes /S /Q
+
+
+/* 
+In ts-built/app.js, fix the routes variable 
+and remove the users variable.
+
+In bin/www fix the app variable.
+
+Go to: http://localhost:3000/
+
+DEBUGGING:
+
+- trun on map file generation in tsconfig:
+	add "sourceMap" : true to "compilerOptions"
+- regenerate later with sourceMap set to false
+	or write script
+
+*/
